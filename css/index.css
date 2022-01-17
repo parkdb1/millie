@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
 /* common.css */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 body {
@@ -30,20 +32,12 @@ table {
   border-collapse: collapse;
 }
 
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/notosanskr/v21/Pby6FmXiEBPT4ITbgNA5CgmOsn7tqoAetwxcvEcQNuukkRBBEIyMcFQ.0.woff2) format("woff2");
-  unicode-range: U+f9ca-fa0b, U+ff03-ff05, U+ff07, U+ff0a-ff0b, U+ff0d-ff19, U+ff1b, U+ff1d, U+ff20-ff5b, U+ff5d, U+ffe0-ffe3, U+ffe5-ffe6;
-}
-
 header {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 header .head {
@@ -90,46 +84,60 @@ main .intro {
   height: 100vh;
 }
 
-main .intro-txt {
+main .intro .intro-txt {
   width: 55%;
 }
 
-main .intro-txt img {
+main .intro .intro-txt img {
   width: 100%;
   margin-top: 50%;
   margin-left: 10%;
 }
 
 main .main2 {
+  background-color: #f7f7f7;
   margin: 0 auto;
   text-align: center;
   white-space: pre-line;
+  overflow: hidden;
+}
+
+main .main2 .txt1 {
+  margin: -40px;
 }
 
 main .main2 .txt1 h2 {
   font-size: 32px;
-  font-weight: bold;
-  font-family: 'Noto Sans KR';
+  font-weight: 700;
   letter-spacing: -2px;
 }
 
 main .main2 .txt1 h2 small {
+  font-weight: 400;
   font-size: 16px;
   display: block;
   color: #555;
   letter-spacing: -1px;
 }
 
-main .txt2 p {
-  font-family: 'Noto Sans KR';
+main .main2 .txt2 {
+  line-height: 120%;
+}
+
+main .main2 .txt2 img {
+  margin-top: -60px;
+  width: 40%;
+}
+
+main .main2 .txt2 p {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -2px;
 }
 
-main .txt2 p small {
+main .main2 .txt2 p small {
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 100;
   color: #555;
   letter-spacing: -1px;
   font-weight: 500;
@@ -143,15 +151,16 @@ main .main3 {
 
 main .main3 h2 {
   font-size: 32px;
-  font-weight: bold;
-  font-family: 'Noto Sans KR';
+  font-weight: 700;
   letter-spacing: -2px;
 }
 
 main .main3 h2 small {
   font-size: 16px;
+  font-weight: 400;
   display: block;
   color: #555;
+  line-height: 160%;
   letter-spacing: -1px;
 }
 
@@ -167,6 +176,10 @@ main .main3 .main3_img img {
   width: 33.3333%;
 }
 
+main .main4 {
+  overflow: hidden;
+}
+
 main .main4 h2 {
   margin: 0 auto;
   text-align: center;
@@ -174,23 +187,29 @@ main .main4 h2 {
   font-size: 32px;
   font-weight: bold;
   font-family: 'Noto Sans KR';
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 main .main4 h2 small {
   font-size: 16px;
   display: block;
   color: #555;
+  font-weight: 400;
   letter-spacing: -1px;
+}
+
+main .main4 .main4-btn {
+  overflow: hidden;
+  padding-left: 10px;
+  white-space: nowrap;
 }
 
 main .main4 .main4-btn button {
   background: #fff;
   color: #242424;
   font-size: 14px;
-  padding: 1px 10px;
+  padding: 5px 14px;
   border-radius: 100px;
-  overflow: hidden;
   border: 1px solid #242424;
 }
 
@@ -200,11 +219,51 @@ main .main4 .main4-btn button:hover {
 }
 
 main .main4 .main4-book {
+  overflow-x: scroll;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 5%;
+  margin-left: 16px;
+  letter-spacing: -.4px;
 }
 
-main .main4 .main4-book img {
-  width: 30%;
+main .main4 .main4-book figure {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 40%;
+  margin-right: 5%;
+}
+
+main .main4 .main4-book figure .main4-title {
+  font-weight: bold;
+}
+
+main .main4 .main4-book figure .main4-author {
+  color: #6f6f6f;
+  font-size: 14px;
+}
+
+main .main4 .main4-book figure .main4-reading {
+  background: url("../img/plusicon.svg") no-repeat 0;
+  background-size: 16px;
+  padding-left: 20px;
+  color: #6f6f6f;
+  font-size: 14px;
+}
+
+main .main4 .main4-book figure p img {
+  width: 100%;
+}
+
+main .main4 .main4-book figure:nth-of-type(2) {
+  padding-top: 6%;
+}
+
+main .main5 {
+  background-color: #f7f7f7;
+  overflow: hidden;
 }
 
 main .main5 h2 {
@@ -212,53 +271,63 @@ main .main5 h2 {
   text-align: center;
   white-space: pre-line;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: 'Noto Sans KR';
   letter-spacing: -2px;
 }
 
 main .main5 h2 small {
   font-size: 16px;
+  font-weight: 400;
   display: block;
   color: #555;
   letter-spacing: -1px;
 }
 
 main .main5 .main5-inner {
-  width: 40%;
+  position: relative;
+  width: 100%;
   margin-top: -20px;
+  padding: 40px 0;
 }
 
 main .main5 .main5-inner img {
-  width: 100%;
+  width: 40%;
   margin: 10px;
+  position: absolute;
 }
 
 main .main5 .main5-inner img:nth-child(1) {
-  margin-left: 200px;
+  right: 10%;
+  top: 5%;
 }
 
 main .main5 .main5-inner img:nth-child(2) {
-  margin-left: 45px;
-  margin-top: -80px;
+  left: 5%;
+  top: 25%;
 }
 
 main .main5 .main5-inner img:nth-child(3) {
-  margin-left: 220px;
-  margin-top: -40px;
+  right: 5%;
+  top: 70%;
 }
 
 main .main5 .main5-inner img:nth-child(4) {
-  margin-left: 20px;
-  margin-top: -100px;
+  left: -1%;
+  top: 75%;
 }
 
 main .main5 .main5-item {
   position: relative;
+  margin-top: -15%;
+}
+
+main .main5 .main5-item p {
+  text-align: center;
 }
 
 main .main5 .main5-item p img {
-  width: 100%;
+  width: 80%;
 }
 
 main .main5 .main5-item p:nth-child(2) {
@@ -282,43 +351,100 @@ main .main6 h2 {
   padding: 50px;
 }
 
-main .main6 ul li {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -6px;
-}
-
 main .main6 ul li button {
+  border: 1px solid #fff;
+  position: relative;
   width: 80%;
   border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -1px;
+  line-height: 24px;
   background: #fff;
   margin-bottom: 16px;
-  padding: 22px 24px 24px;
+  padding: 22px 65px 24px 24px;
+  text-align: left;
   cursor: pointer;
+  -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-footer h2 {
+main .main6 ul li button::before {
+  content: '';
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../img/ico_down.png);
+  background-size: cover;
+  width: 2em;
+  height: 2em;
+  display: inline-block;
+}
+
+footer .footer-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5%;
+}
+
+footer .footer-head h2 {
   font-size: 16px;
   color: #242424;
   font-weight: 700;
 }
 
-footer .sns {
-  width: 100%;
+footer .footer-head .sns {
+  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-left: 30%;
 }
 
-footer .sns a {
-  width: 20%;
+footer .footer-head .sns a {
+  width: 50%;
   display: inline-block;
+  margin-left: 2%;
 }
 
-footer .sns a img {
+footer .footer-head .sns a img {
   width: 100%;
+}
+
+footer .info button {
+  color: #a5a5a5;
+  font-size: 10px;
+  background: url(../img/icon1.png) 100% no-repeat;
+  background-size: 12px;
+  padding-right: 14px;
+  border: 1px solid #fff;
+  margin-left: 3%;
+}
+
+footer .info1 {
+  padding: 0 5%;
+  margin-top: 4%;
+}
+
+footer .info1 a {
+  display: inline-block;
+  font-size: 12px;
+  color: #6f6f6f;
+  background: url(../img/icon2.png) 100% no-repeat;
+  background-size: 12px;
+  padding-right: 14px;
+}
+
+footer .copy {
+  color: #6f6f6f;
+  font-size: 10px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  padding: 0 5%;
 }
 /*# sourceMappingURL=index.css.map */

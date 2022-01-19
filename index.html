@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/index.css" rel="stylesheet">
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="js/common.js"></script>
 </head>
 <body>
     
@@ -18,10 +20,12 @@
         </div>
     </header>
 
+
+
     <main>
         <div class="intro">
             <div class="intro-txt">
-                <img src="img/1_visual2.png" alt="">
+                <img src="img/1_visual3.png" alt="">
             </div>
         </div>
         
@@ -81,9 +85,14 @@
                 </small>
             </h2>
             <div class="main3_img">
+                <img src ="img/slide1.png">
+                <img src ="img/slide2.png">
+                <img src ="img/slide3.png">
+
                 <!-- img source 없음 
                 이미지 배열 3:3:3 하고싶으면 ? -->
-                <img src="img/book1.jpg"alt="">
+
+                <!-- <img src="img/book1.jpg"alt="">
                 <img src="img/book2.jpg"alt="">
                 <img src="img/book3.jpg"alt="">
                 <img src="img/book4.jpg"alt="">
@@ -91,6 +100,10 @@
                 <img src="img/book6.jpg"alt="">
                 <img src="img/book7.jpg"alt="">
                 <img src="img/book8.jpg"alt="">
+                display: flex;
+                // flex-direction:column;
+                flex-wrap: wrap;
+                img{width: 33.3333%;} -->
             </div>
         </div>
 
@@ -104,50 +117,207 @@
                 </small>
             </h2>
             <div class="main4-btn">
-                <button>주식</button>
-                <button>영어</button>
+                <button >주식</button>
+                <button >영어</button>
                 <button>고전</button>
                 <button>인테리어</button>
                 <button>다이어트</button>
             </div>
             <div class="main4-book">
-                <figure>
-                    <p><img src="img/4.book1.jpg"alt=""></p>
-                    <figcaption class="book txt">
-                        <p class="main4-title">야나도 영어회화</p>
-                        <p class="main4-author">타인의 취향</p>
-                        <p class="main4-reading">
-                            29% 
-                            <span>|</span>
-                            135분
-                        </p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <p><img src="img/4.book3.jpg"alt=""></p>
-                    <figcaption class="book txt">
-                        <p class="main4-title">나 혼자만 알고싶은 영어책:순한맛</p>
-                        <p class="main4-author">비전팩토리</p>
-                        <p class="main4-reading">
-                            58% 
-                            <span>|</span>
-                            30분
-                        </p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <p><img src="img/4.book2.jpg"alt=""></p>
-                    <figcaption class="book txt">
-                        <p class="main4-title">혼자 공부하는 영어 습관의 힘 : 영어패턴</p>
-                        <p class="main4-author">키출판사</p>
-                        <p class="main4-reading">
-                            41% 
-                            <span>|</span>
-                            83분
-                        </p>
-                    </figcaption>
-                </figure>
-            
+                <div class="coin active ">
+                    <figure>
+                        <p><img src="img/coin1.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">주린이가 가장 알고 싶은 최다질문 TOP 77</p>
+                            <p class="main4-author">원앤원컨텐츠그룹</p>
+                            <p class="main4-reading">
+                                29% 
+                                <span>|</span>
+                                135분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/coin2.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">슈퍼개미의 왕초보 주식수업</p>
+                            <p class="main4-author">이레미디어</p>
+                            <p class="main4-reading">
+                                58% 
+                                <span>|</span>
+                                30분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/coin3.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">혼자 공부하는 영어 습관의 힘 : 영어패턴</p>
+                            <p class="main4-author">키출판사</p>
+                            <p class="main4-reading">
+                                41% 
+                                <span>|</span>
+                                83분
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="english ">
+                    <figure>
+                        <p><img src="img/4.book1.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">야나도 영어회화</p>
+                            <p class="main4-author">타인의 취향</p>
+                            <p class="main4-reading">
+                                29% 
+                                <span>|</span>
+                                135분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/4.book3.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">나 혼자만 알고싶은 영어책:순한맛</p>
+                            <p class="main4-author">비전팩토리</p>
+                            <p class="main4-reading">
+                                58% 
+                                <span>|</span>
+                                30분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/4.book2.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">혼자 공부하는 영어 습관의 힘 : 영어패턴</p>
+                            <p class="main4-author">키출판사</p>
+                            <p class="main4-reading">
+                                41% 
+                                <span>|</span>
+                                83분
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="classic">
+                    <figure>
+                        <p><img src="img/go1.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">까라마조프 씨네 형제들(상)</p>
+                            <p class="main4-author">열린책들</p>
+                            <p class="main4-reading">
+                                29% 
+                                <span>|</span>
+                                135분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/go2.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">변신.시골의사</p>
+                            <p class="main4-author">문예출판사</p>
+                            <p class="main4-reading">
+                                58% 
+                                <span>|</span>
+                                30분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/go3.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">인간실격.사양</p>
+                            <p class="main4-author">문예출판사</p>
+                            <p class="main4-reading">
+                                41% 
+                                <span>|</span>
+                                83분
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="interior">
+                    <figure>
+                        <p><img src="img/in1.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">까막의 감성 인테리어 손뜨개</p>
+                            <p class="main4-author">팜파스</p>
+                            <p class="main4-reading">
+                                29% 
+                                <span>|</span>
+                                135분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/in2.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">로제의 모티브 손뜨개 소품</p>
+                            <p class="main4-author">팜파스</p>
+                            <p class="main4-reading">
+                                58% 
+                                <span>|</span>
+                                30분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/in3.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">블루체크의 코바늘 손뜨개 수업</p>
+                            <p class="main4-author">알에이치코리아(RHK)</p>
+                            <p class="main4-reading">
+                                41% 
+                                <span>|</span>
+                                83분
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="hel">
+                    <figure>
+                        <p><img src="img/hel1.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">불량헬스</p>
+                            <p class="main4-author">롤링다이스</p>
+                            <p class="main4-reading">
+                                29% 
+                                <span>|</span>
+                                135분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/hel2.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">죄수 운동법</p>
+                            <p class="main4-author">헬스조선</p>
+                            <p class="main4-reading">
+                                58% 
+                                <span>|</span>
+                                30분
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <p><img src="img/hel3.jpg"alt=""></p>
+                        <figcaption class="book txt">
+                            <p class="main4-title">헬스의 정석 : 근력운동 편</p>
+                            <p class="main4-author">한문화</p>
+                            <p class="main4-reading">
+                                41% 
+                                <span>|</span>
+                                83분
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
             
 
@@ -177,13 +347,51 @@
         <div class="main6">
             <h2>자주 묻는 질문</h2>
             <ul>
-                <li><button>안쓰면 정말 환불해 주나요?</button></li>
-                <li><button>구독 중 해지 할 수 있나요? 수수료는 없나요?</button></li>
-                <li><button>첫 달 무료 혜택은 누구나 받을 수 있나요?</button></li>
-                <li><button>어떤 기기에서 사용할 수 있나요?</button></li>
+                <li>
+                    <button>안쓰면 정말 환불해 주나요?</button>
+                    <div class="qna1">
+                        <p>
+                            물론입니다. 결제 후 콘텐츠 다운로드 및 연람을 하지 않으셨다면 전액 환불해 드리고 있어요.
+                            <b>[밀리>관리>구독관리>결제 내역 확인]</b>에서 직접 환불이 가능하며,
+                            해결이 어려운 경우 고객센터로 문의해 주세요.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <button>구독 중 해지 할 수 있나요? 수수료는 없나요?</button>
+                    <div class="qna2">
+                        <p>
+                            다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다. 
+                            [밀리>관리>구독관리>자동결제 해지]메뉴를 통해 기간에 상관없이 직접 가능해요.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <button>첫 달 무료 혜택은 누구나 받을 수 있나요?</button>
+                    <div class="qna3">
+                        <p>
+                            네.밀리 회원이라면 누!구!나!첫 정기구독 신청 시 1회 제공됩니다. 
+                            아직 신청하지 않으셨다면 바로 구독신청으로 혜택을 받아보세요.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <button>어떤 기기에서 사용할 수 있나요?</button>
+                    <div class="qna4">
+                        <p>
+                            아래 기기와 버전에서 밀리를 사용할 수 있습니다. 
+                            
+                            -휴대폰/태블릿:ios11,Android6 이상 지원
+                            -PC:Mac Yosemite,Window10 이상 지원
+                            -E ink:Android 4.4이상 지원
+                            (크래마 그랑데,크레마 카르타G,이노스페이스원 공식 판매 기기,교보 Sam7.8등)
+                        </p>
+                    </div></li>
             </ul>
         </div>
     </main>
+
+
     <footer>
         <div class="footer-head">
             <h2>(주)밀리의 서재</h2>
